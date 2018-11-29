@@ -29,20 +29,10 @@ busquedaDeUnValorEnArray(numeros, recibirNumero());
 
 
 
-
-
-
-
-
-
 function busquedaDeUnValorEnArray(array6, buscado){
     console.log("en buscar valor en array ")
     console.log("array= " + array6 + " y valor = " + buscado);
     document.write("<h2>EN busquedaDeUnValorEnArray()</h2>")
-    if(array6.indexOf(buscado)== -1){
-        console.log("el valor no esta en el array")
-        document.write("<h3>La posicion de " + buscado + " no existe xq no esta en el array</h3>")
-    }
     document.write("<h3>La posicion de " + buscado + " es " + array6.indexOf(buscado) + "</h3>")
 }
 
