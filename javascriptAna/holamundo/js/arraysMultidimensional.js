@@ -54,3 +54,17 @@ console.log(pelicula);
 
 var listadoPeliculas = pelicula.join();
 console.log(listadoPeliculas);
+
+//PARA CONVERTIR UNA CADENA DE STRING EN ARRAYS. Utilizamos el metodo split();
+
+var canales = "la 1, la 2, Antena 3, Cuatro, Telecinco";
+var canalesArray = canales.split(", ");
+console.log(canalesArray);
+
+//PARA ORDENAR UN ARRAY POR ORDEN ALFABETICO UTILIZAMOS sort();
+pelicula.sort();
+//console.log(pelicula);
+
+//Para ordenarlo del fin a principio, es decir, darle la vuelta, utilizamos reverse();
+pelicula.reverse();
+console.log(pelicula);

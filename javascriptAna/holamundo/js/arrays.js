@@ -42,8 +42,33 @@ document.write("</ul>");
 //OTRA MANERA DE RECORRER UN ARRAY DE MANERA MÁS ELEGANTE ES CON EL FOREACH
 //el forEach se compone de (function(valor(los elementos dentro de la array), indice(posicion que ocupa dentro de la array),
 // y array){}). en el ej. de abajo en lugar de poner function hacemos una funcion flecha.
+/*
 lenguajes.forEach((valor, indice)=>{
     document.write("<li>" + valor + "</li>")
 
 });
+*/
 
+/*
+//OTRA FORMA DE RECORRER UN ARRAY ES CON FOR IN for(in){};
+ for(indice in nombres){
+     document.write("<li>" + nombres[indice] + "</li>")
+ };
+*/
+
+ //BUSQUEDA DENTRO DE UN ARRAY. Utilizamos find();
+ //si en lugar de find(), utilizo findIndex, lo que me diria seria que posicion ocupa esa palabra en el array, en este caso e 0.
+/*
+ var busqueda = nombres.find(function(indice){
+     return indice == "Ana Navarro"
+ })
+console.log(busqueda);
+*/
+
+//busqueda de algun valor dentro de una array. metodo some();
+
+var precios = [10, 20, 50, 80, 100];
+var busqueda = precios.some(function(bla){
+    return bla > 99;
+})
+console.log(busqueda);
