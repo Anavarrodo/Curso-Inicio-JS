@@ -5,7 +5,7 @@
 //Para encontrar la última coincidencia utilizariamos .lastIndexOf()
 //Para hacer una busqueda más extensa de donde se encuentra, en qué linea, etc utilizamos el .match()
 //si quiero que me haga una búsqueda de todas las veces que aparece esa palabra, utilizamos el .match(/palabra/gi) sin comillas
-/*Para buscar todas las palbras que aparezcan desde un caracter a otro utilizamos el .substr() en introducimos en el parentesis primero desde el caracter que queremos que busquemos seguido
+/*Para buscar todas las palabras que aparezcan desde un caracter a otro utilizamos el .substr() en introducimos en el parentesis primero desde el caracter que queremos que busquemos seguido
  de cuantos caracteres quiero que me enseñe. es decir a partir del caracter 14, enseñame 5 caracteres (14,5) En este ejemplo seria rid
  */
 //.charAt(). entre parentesis le decimos el numero de caracter y nos indica a cual corresponde.

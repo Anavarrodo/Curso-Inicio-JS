@@ -7,7 +7,7 @@ function sumame (numero1, numero2, sumaYmuestra, sumaporDos){
     var sumar = numero1 + numero2;
     sumaYmuestra(sumar);
     sumaporDos(sumar);
-    return sumar;
+    return sumar;// el return ahora no hace nada 
 }
 sumame (5, 5, function(dato){
     console.log("la suma es " + (dato))

@@ -1,8 +1,7 @@
 'use strict'
 
 // bluce while. es un bucle indenfinido. infinito. aun así se le añade una condición.
-//modificacion
-//5445454
+
 var year = 2018
 
 while(year != 1991){
