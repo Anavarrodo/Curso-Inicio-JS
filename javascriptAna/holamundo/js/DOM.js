@@ -4,10 +4,6 @@
 //DIV es una etiqueta que se crea para definir un bloque.
 
 
-
-
-
-
 // CONSEGUIR ELEMENTOS CON UN ID CONCRETO. un id es unico, por lo que solo puede haber un elemento un con su etiqueta.
 function cambiarColor(color){
     caja.style.background = color;
@@ -27,7 +23,7 @@ caja.className = "Hola!!!!!"
 var todosLosDivs = document.getElementsByTagName("div");
 console.log(todosLosDivs); //nos aparece un array con todos los elementos(todos los divs):
 
-//var contenidoEnTexto = todosLosDivs[2].textContent; //el textContent se usa para sacar el contenido de ese array
+//var contenidoEnTexto = todosLosDivs[2].textContent; //el textContent se usa para sacar el contenido de ese array por consola
 /*
 var contenidoEnTexto = todosLosDivs[2];
 contenidoEnTexto.innerHTML = "Ahora soy una almohada, no una caja!!" // Con el innerHTML modificio ese array
@@ -64,7 +60,7 @@ divRojo[0].style.background = "red";
 console.log(caja);
 
 //QUERY SELECTOR
-//Se utiliza mejor para pequeñas cosas, para seleccionar clases seria mejor el getElementsByNameClass
+//Se utiliza mejor para pequeñas cosas como el id que es unico, para seleccionar clases seria mejor el getElementsByNameClass
 var id = document.querySelector("#encabezado");
 console.log(id);
 
