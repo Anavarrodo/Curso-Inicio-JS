@@ -7,6 +7,7 @@
 setInterval(fucntion(){
 }, tiempo en milisegundos)
 */
+window.addEventListener('load', function(){
 
 function intervalo(){
     var tiempo = setInterval(function(){
@@ -33,3 +34,5 @@ start.addEventListener('click', function(){
     console.log("has iniciado la ejecucion")
     interval();
     })
+
+})

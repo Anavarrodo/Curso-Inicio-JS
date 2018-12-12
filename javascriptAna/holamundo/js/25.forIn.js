@@ -14,6 +14,7 @@ function numeroDelMesPorMes(mes){
     return resultado;
 }
 
+//EJERCICIOS PEDRO
 //2.CREA UNA FUNCION QUE DADO UN SIGNO DEL ZODIACO TE DEVUELVA EL MES EN EL QUE HAS HABER NACIDO.
 //nota 0
 function mesDeNacimientoPorSigno(signo){
