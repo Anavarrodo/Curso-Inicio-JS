@@ -5,9 +5,14 @@ $(document).ready(function(){
     $("#boton")
         .removeAttr('disabled')
         .click(function(){
-        $("#menu").prepend('<li><a href="' + $("#campoLink").val() + '"></a></li>')
-        $("#campoLink").val("") //campo vacio despues de escribir un link
-        reloadLink()
+        if($("#campoLink").val() == 0){
+            alert("Escribe bien el enlace")
+        }else{
+            $("#menu").prepend("<li><a href='" + $("#campoLink").val() + "'><a></li>")
+            $("#campoLink").val("")
+            reloadLink()
+        }
+       
     })
 
 
@@ -15,7 +20,7 @@ $(document).ready(function(){
 function reloadLink(indice){
     $('a').each(function(){
         var este = $(this)
-        var enlace = este.attr('href') //nos saca el contenido de los href en el atributo a
-        este.text(enlace) //nos saca el contenido en el DOM
+        var enlace = este.attr('href') //NOS MUESTRA EL VALOR DEL ATRIBUTO QUE LE HAYAMOS PEDIDO
+        este.text(enlace) //NOS MUESTRA POR DOM EL CONTENIDO QUE HAYAMOS PEDIDO
     })
 }

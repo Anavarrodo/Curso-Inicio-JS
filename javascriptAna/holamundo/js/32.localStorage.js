@@ -20,7 +20,7 @@ var anaEsAsi = {
 
 
 
-//para guardar objetod al localStorage, necesitamos convertir el objeto en un string
+//para guardar objetos al localStorage, necesitamos convertir el objeto en un string
 localStorage.setItem("Datos Ana", JSON.stringify(anaEsAsi))
 //Para recuperar el objeto tengo que convertirlo en un objeto JSON usable, no me sirve un JSON string
 var anita = JSON.parse(localStorage.getItem("Datos Ana"))

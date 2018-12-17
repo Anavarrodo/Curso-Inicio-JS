@@ -63,7 +63,8 @@ $(document).ready(function(){
     })
 
 //EVENTO FOCUS
-
+    // CREO UN FORMULARIO CON UN CAMPO DE TIPO TEXTO
+    //Y CREO UN DIV QUE VA A ESTAR OCULTA 
     var nombre = $("#nombre")
     var datos = $("#datos")
     nombre.focus(function(){
@@ -71,7 +72,7 @@ $(document).ready(function(){
     })
 
 //EVENTO BLUR
-
+    //CUANDO PINCHE FUERA AL HABER INTRODUCIDO ALGO EN EL FORMULARIO, ME APARECERÁ LA CAJA CON LA INFORMACION
     nombre.blur(function(){
         $(this).css("border", "2px solid aqua")
         
@@ -88,9 +89,9 @@ $(document).ready(function(){
 
 //MOUSUP
 
-datos.mouseup(function(){
-    $(this).css("border-color", "black")
-})
+    datos.mouseup(function(){
+         $(this).css("border-color", "black")
+    })
 
 
 //MOUSEMOVE -captura las coordenadas del raton
@@ -103,9 +104,6 @@ $(document).mousemove(function(){
     sigueme.css("left", event.clientX)
            .css("top", event.clientY)
 })
-
-
-
 
 
 
