@@ -31,8 +31,21 @@ $(document).ready(function(){
 
     
     $("#boton").click(function(){
-        $(".efectos").toggle('fade', 1000) //efecto, velocidad en tiempo
+        $(".efectos").toggle('shake', 1000) //efecto, velocidad en tiempo
     })
 
+    //TOLLTIPS - coge aquellos elementos que posea el atributo title y lo muestra cuando pasamos el raton
+    $('document').tooltip()
 
+    //DIALOG
+    $("#lanzame").click(function(){
+        $("#popup").dialog()
+    })
+   
+    //DATEPICKER - CALENDARIO
+    $("#calendario").datepicker()
+
+    //TABS - PESTAÑAS
+    $("#pestana").tabs()
+    
 })
