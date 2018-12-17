@@ -1,0 +1,31 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>ANA NAVARRO</title>
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/05.ajax.js"></script>
+
+    <style>
+        #datos{
+            border: 2px solid black;
+            width: 250px;
+            height: 250px;
+            overflow: scroll;
+        }
+    </style>
+
+</head>
+<body>
+    <h3>AJAX-peticiones asincronas a un servidor</h3>
+    
+    <form action="https://reqres.in/api/users" method="POST" id="formulario">
+        Nombre: <input type="text" name="first_name"/>
+        Apellidos: <input type="text" name="last_name"/>
+        <input type="submit" value="Registrar"/>
+
+    </form>
+    <div id="datos"></div>
+</body>
+</html>
