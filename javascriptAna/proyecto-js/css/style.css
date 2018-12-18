@@ -206,5 +206,45 @@ footer{
 }
 
 .bx-wrapper, .bx-viewport{
-    height: 250px !important
+    height: 250px !important;
+}
+
+#selector-theme{
+    position: fixed;
+    top: 40%;
+    background: rgba(51, 51, 51, 0.50);
+    width: 50px;
+    height: 100px;
+}
+
+#to-arena,
+#to-blanco,
+#to-rosa{
+    width: 25px;
+    height: 25px;
+    border: 1px solid white;
+    display: block;
+    margin: 0px auto;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    cursor: pointer;
+}
+
+#to-arena{
+    background: goldenrod;
+}
+
+#to-blanco{
+    background: darkseagreen;
+}
+
+#to-rosa{
+    background: hotpink;
+}
+
+.subir{
+    color: white;
+    text-decoration: none;
+    display: block;
+    float: right;
 }
