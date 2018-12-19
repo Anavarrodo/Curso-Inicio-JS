@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.clearfix{
+    float: none;
+    clear: both;
+}
+
+body{
+    /*
+    1. linea: cargamos la imagen
+    2. linea: le decimos a la foto que si bajamos la pg no se acabe, siempre se muestre
+    */
+    background: url("../img/rosa.jpg"); 
+    background-attachment: fixed;
+}
+
+#global{
+    width: 65%;
+    margin: 0px auto;
+    margin-top: 30px;
+    padding: 88px;
+    background: papayawhip;
+    box-shadow: 0px 0px 2px black;
+}
+
+#logo{
+    font-family: verdana;
+    font-size: 18px;
+    letter-spacing: 4px;
+    line-height: 76px;
+    text-transform: uppercase;
+    background: lightsalmon;
+    text-align: left;
+    float: left;
+    margin-bottom: 20px;
+    width: 100%;
+    height: 80px;
+    color: azure;
+}
+
+#menu{
+    font-family: verdana;
+    width: 100%;
+    text-transform: uppercase;
+    background: darkgray;
+    margin-bottom: 20px;
+}
+
+#menu ul{
+    line-height: 46px;
+    list-style: none;
+}
+
+#menu ul li{
+    height: 46px;
+    display: inline-block;
+    transition: all 300ms;
+}
+
+#menu ul li:hover{
+    background: darkseagreen;
+}
+
+#menu a{
+    display: block;
+    text-decoration: none; 
+    color: white;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+#post{
+    width: 60%;
+}
+
+#post h2{
+    font-family: verdana;
+    color: #333;
+    margin-bottom: 9px;
+}
+
+#post p{
+    margin-top: 15px;
+    font-family: verdana;
+    font-size: 17px;
+    line-height: 24px;
+    text-align: justify;
+
+}
+.date{
+    font-family: verdana;
+    font-size: 16px;    
+}
