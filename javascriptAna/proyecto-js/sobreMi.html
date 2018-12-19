@@ -8,12 +8,10 @@
     <link id="theme" rel="stylesheet" type="text/css" href="css/blanco.css" />
     <!--JQUERY-->
     <script src="./js/jquery-3.3.1.min.js"></script>
-    <!--SLIDER-->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css"/>
-    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
-    <!--MOMENT JS CDN FECHA DE PUCLICACION-->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/locale/es.js"></script>
+    <link rel="stylesheet" href="./js/jquery-ui-1.12.1/jquery-ui.min.css"/>
+    <link rel="stylesheet" href="./js/jquery-ui-1.12.1/jquery-ui.structure.min.css"/>
+    <link rel="stylesheet" href="./js/jquery-ui-1.12.1/jquery-ui.theme.min.css"/>
+    <script src="./js/jquery-ui-1.12.1/jquery-ui.min.js"></script>
     <!--SCRIPT-->
     <script src="./js/main.js"></script>
 </head>
@@ -42,19 +40,29 @@
             </navbar>
         </header>
 
-        <!--SLIDER-->
-        <div id="slider">
-            <div class="bxslider">
-                <div><img src="img/brochas2.jpg"></div>
-                <div><img src="img/maquilaje.jpg"></div>
-                <div><img src="img/todo.jpg"></div>
-            </div>
-        </div>
-
         <!--CONTENIDO-->
         <section id="content">
-            <div id="posts">
-                <!--CARGADO POST DESDE JSON-->
+            <div id="box">
+                <h2>Sugerencias</h2>
+                <!--ACORDEON-->
+                <div id="acordeon">
+                    <h3>¿Qué colores usar si eres morena?</h3>
+                    <p>
+                        Prueba los colores púrpuras, ciruleas, los 'joya' (rojo, verde, amarillo, azul marino, negro) y los grises.
+                    </p>
+                
+               
+                    <h3>¿Qué colores usar si eres rubia?</h3>
+                    <p>
+                        Rojo para labios y tonos nude, tonos pastel en sombra de ojos.                    
+                    </p>
+                    
+                
+                    <h3>¿Qué colores usar si eres pelirroja?</h3>
+                    <p>
+                        Tienes que acentuar tus cejas, pintalabios coral, melocotón, albaricoque o rosados.
+                    </p>
+                </div>
             </div>
             <aside id="sidebar">
                 <div id="about">
