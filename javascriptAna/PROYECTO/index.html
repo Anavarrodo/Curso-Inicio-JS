@@ -1,72 +1,94 @@
 <!DOCTYPE <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
     <meta charset="utf-8" />
     <title>ANA NAVARRO</title>
-    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <!--STYLES CSS-->
+    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <!--JQUERY-->
+    <!--SLIDER-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
+    <script src="./jQuery/jquery-3.3.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+    <!--MOMENT JS-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/locale/es.js"></script>
+    <!--SCRIPTS-->
     <script src="./js/main.js"></script>
 </head>
+
 <body>
-    <!--GLOBAL-->
+
     <section id="global">
-        
-        <!--ENCABEZADO-->
+
+        <!--CABECERA-->
         <header>
-                <div id="logo">
-                    <h1>Titulo de Prueba</h1>
-                </div>
-    
-                <div class="clearfix"></div>
-    
-                <nav id="menu">
-                    <ul>
-                        <li><a href="#">Inicio</a></li>
-                        <li><a href="#">Reloj</a></li>
-                        <li><a href="#">Sobre mí</a></li>
-                        <li><a href="#">Contacto</a></li>
-                    </ul>
-                </navbar>
-            </header>
+            <div id="logo">
+                <h1>PROYECTO A.N.</h1>
+            </div>
+
+            <div class="clearfix"></div>
+
+            <nav id="menu">
+                <ul>
+                    <li><a href="#">Inicio</a></li>
+                    <li><a href="#">Sobre mí</a></li>
+                    <li><a href="#">Reloj</a></li>
+                    <li><a href="#">Contacto</a></li>
+                </ul>
+            </nav>
+        </header>
+
         <!--SLIDER-->
-        <div id="slider">
+        <div class="bxslider">
+                    <img src="img/fondos-pantalla-paisajes-pc-1024.jpg"/>
+                    <img src="img/Paisajes-de-Primavera-full-hd.jpg"/>
+                    <img src="img/Descargar Pack Espectaculares fondo de paisajes (134).jpg"/>
+        </div>
 
-            </div>
         <!--CONTENIDO-->
-        <section id="contenido">
-            <div id="post">
-                <article>
-                    <h2>Titulo de Prueba</h2>
-                    <span class="date">Fecha de publicacion</span>
-                    <p>
-                            Con frecuencia, las personas están confundidas acerca de la diferencia entre las zonas horarias y las compensaciones UTC.
-
-                            Un desplazamiento UTC es un valor que representa qué tan lejos está una fecha y hora particular de UTC. Se expresa en el formato HH: mm la mayor parte del tiempo.
-                            
-                            Una zona horaria es una región geográfica donde todas las personas observan un horario estándar legalmente obligatorio.
-                            
-                            Una zona horaria generalmente tiene más de un desplazamiento de UTC debido al horario de verano. Varias zonas horarias pueden tener el mismo desplazamiento en algún momento del año. Por ejemplo, las zonas horarias de América / Chicago, América / Denver y América / Belice tienen un desplazamiento de -06: 00 en diferentes momentos. Por esta razón, es imposible inferir una zona horaria a partir de solo un valor de compensación.
-                            
-                            
-                    </p>
-                </article>
+        <section id="content">
+                <div id="posts">
+                        <article class="post">
+                            <h2>Los Zapateros</h2>
+                            <span class="date">Fecha de publicación</span>
+                            <p>Y eso hicieron. Pero de tanto trabajar, los zapateros cayeron enfermos. Durante varias semanas apenas pudieron trabajar. Cuando Don Ismael fue a verlos para recoger su pedido se enfadó muchísimo al ver que no había nada terminado. Hecho una furia salió a la calle y les gritó:</p>
+                            <a href="#" class="leerMas">Leer más</a>
+                        </article>
             </div>
-            
             <aside id="sidebar">
-                <!--SOBRE MI-->
-                
-                <div id="sobreMi">
-                    
-                    <h2>¿Quién soy?</h2>
+                <div id="about">
+                    <h4>¿Quién soy?</h4>
+                    <img src="img/tonos marrones.png"/>
+                    <p>Texto de prueba</p>
                 </div>
-                <!--FORMULARIO-->
-                <div id="login">
 
+                <div id="login">
+                    <h4>IDENTIFICATE</h4>
+                    <form action="#" method="POST">
+                        <label for="name">Nombre:</label>
+                        <input type="text" name="name"/>
+
+                        <label for="email">Email:</label>
+                        <input type="email" name="email"/>
+
+                        <label for="password">Contraseña:</label>
+                        <input type="password" name="password"/>
+
+                        <input type="submit" value="Entrar"/>
+                    </form>
                 </div>
             </aside>
+
+            <div class="clearfix"></div>
+
         </section>
     </section>
-    <footer>
 
-    </footer>
+<!--FOOTER-->
+<footer>
+    Web creada por Ana Navarro &copy;
+</footer>
+
 </body>
 </html>
