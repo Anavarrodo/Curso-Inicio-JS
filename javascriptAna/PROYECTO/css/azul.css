@@ -1,0 +1,28 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.clearfix{
+    float: none;
+    clear: both; /* limpia los flotados */
+}
+
+body{
+    background: url("../img/azul.jpg");
+    background-attachment: fixed;
+}
+
+#logo{
+    background: cornflowerblue;
+}
+
+
+#menu ul li:hover{
+    background: royalblue;
+}
+
+.leerMas{
+    background: cornflowerblue;
+    color: bisque;
+}

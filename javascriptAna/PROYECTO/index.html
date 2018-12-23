@@ -4,11 +4,12 @@
     <meta charset="utf-8" />
     <title>ANA NAVARRO</title>
     <!--STYLES CSS-->
-    <link rel="stylesheet" type="text/css" media="screen" href="css/style.css" />
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+    <link id="theme" rel="stylesheet" type="text/css" href="css/principal.css" />
     <!--JQUERY-->
+    <script src="./jQuery/jquery-3.3.1.min.js"></script>
     <!--SLIDER-->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
-    <script src="./jQuery/jquery-3.3.1.min.js"></script>
     <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
     <!--MOMENT JS-->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment.min.js"></script>
@@ -18,6 +19,13 @@
 </head>
 
 <body>
+<!--CAMBIADOR DE TEMA-->
+    <div id="change-theme">
+        <div id="to-principal"></div>
+        <div id="to-rosa"></div>
+        <div id="to-azul"></div>
+    </div>
+
 
     <section id="global">
 
@@ -31,10 +39,10 @@
 
             <nav id="menu">
                 <ul>
-                    <li><a href="#">Inicio</a></li>
-                    <li><a href="#">Sobre mí</a></li>
-                    <li><a href="#">Reloj</a></li>
-                    <li><a href="#">Contacto</a></li>
+                    <li><a href="index.html">Inicio</a></li>
+                    <li><a href="sobreMi.html">Sobre mí</a></li>
+                    <li><a href="reloj.html">Reloj</a></li>
+                    <li><a href="contacto.html">Contacto</a></li>
                 </ul>
             </nav>
         </header>
@@ -49,12 +57,7 @@
         <!--CONTENIDO-->
         <section id="content">
                 <div id="posts">
-                        <article class="post">
-                            <h2>Los Zapateros</h2>
-                            <span class="date">Fecha de publicación</span>
-                            <p>Y eso hicieron. Pero de tanto trabajar, los zapateros cayeron enfermos. Durante varias semanas apenas pudieron trabajar. Cuando Don Ismael fue a verlos para recoger su pedido se enfadó muchísimo al ver que no había nada terminado. Hecho una furia salió a la calle y les gritó:</p>
-                            <a href="#" class="leerMas">Leer más</a>
-                        </article>
+                <!--CARGADO DESDE JS-->
             </div>
             <aside id="sidebar">
                 <div id="about">
@@ -67,7 +70,7 @@
                     <h4>IDENTIFICATE</h4>
                     <form action="#" method="POST">
                         <label for="name">Nombre:</label>
-                        <input type="text" name="name"/>
+                        <input type="text" name="name" id="form_name"/>
 
                         <label for="email">Email:</label>
                         <input type="email" name="email"/>
@@ -88,6 +91,7 @@
 <!--FOOTER-->
 <footer>
     Web creada por Ana Navarro &copy;
+    <span id="subir">Ir arriba</span>
 </footer>
 
 </body>

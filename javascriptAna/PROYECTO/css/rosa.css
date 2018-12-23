@@ -1,0 +1,29 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.clearfix{
+    float: none;
+    clear: both; /* limpia los flotados */
+}
+
+body{
+    background: url("../img/rosa.jpg");
+    background-attachment: fixed;
+}
+
+#logo{
+    background: mistyrose;
+    color: black;
+}
+
+
+#menu ul li:hover{
+    background: pink;
+}
+
+.leerMas{
+    background: mistyrose;
+    color: bisque;
+}
