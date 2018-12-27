@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.clearfix{
+    float: none;
+    clear: both; /* limpia los flotados */
+}
+
+body{
+    background: url("../img/tonos\ marrones.png");
+    background-attachment: fixed;
+}
+
+#global{
+    background: cornsilk;
+}
+
+#logo{
+    background: rosybrown;
+}
+
+#menu ul li:hover{
+    background: chocolate;
+}
+
+.leerMas{
+    background: rosybrown;
+}

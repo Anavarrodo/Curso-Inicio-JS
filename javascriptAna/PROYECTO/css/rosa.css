@@ -1,0 +1,30 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.clearfix{
+    float: none;
+    clear: both; /* limpia los flotados */
+}
+
+body{
+    background: url("../img/rosa.jpg");
+    background-attachment: fixed;
+}
+
+#global{
+    background: lemonchiffon;
+}
+
+#logo{
+    background: pink;
+}
+
+#menu ul li:hover{
+    background: orchid;
+}
+
+.leerMas{
+    background: pink;
+}
