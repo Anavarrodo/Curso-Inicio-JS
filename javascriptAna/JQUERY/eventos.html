@@ -1,0 +1,72 @@
+<!DOCTYPE <!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <title>Ana Navarro</title>
+
+    <script src="./js/jquery-3.3.1.min.js"></script>
+    <script src="./js/02.eventos.js"></script>
+   
+    <style>
+    #caja{
+        width: 250px;
+        height: 250px;
+        border-style: 5px groove black;
+        background: rosybrown;
+        transition: background-color .5s;
+        }
+/*
+     #caja:hover{
+        cursor: pointer;
+        background: fuchsia
+    }
+*/
+           
+    input{
+        padding: 10px;
+        width: 300px;
+        font-size: 10px;
+    }
+
+    #datos{
+        width: 250px;
+        height: 50px;
+        margin-top: 20px;
+        border: 4px groove black;
+        padding: 20px;
+        display: none
+    }
+
+    #sigueme{
+        width: 25px;
+        height: 25px;
+        display: block;
+        position: absolute;
+        background: yellowgreen;
+        opacity: 0.5;
+        border-radius: 999px;
+        border: 3px solid black
+    }
+</style>
+    
+</head>
+<body>
+    <h3>jQuery y Eventos!!</h3>
+
+    <div id="sigueme"></div>
+
+    <form>
+    <span>Nombre</span>
+        <input type="text" id="nombre"/>
+    </form>
+
+    <div id="datos"></div>
+
+    <hr>
+
+    <div id="caja">
+         Hola soy Ana!!
+    </div>
+    
+</body>
+</html>

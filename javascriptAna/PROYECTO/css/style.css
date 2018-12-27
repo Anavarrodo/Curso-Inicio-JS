@@ -79,6 +79,7 @@ body{
 }
 
 .post h2{
+    margin-top: 66px;
     font-size: 30px;
     color: #333;
 }
@@ -134,7 +135,8 @@ body{
 
 form input[type="text"],
 form input[type="email"],
-form input[type="password"]{
+form input[type="password"],
+form input[type="tel"]{
     padding: 5px;
     border-radius: 2px;
     border: 1px solid #333;
