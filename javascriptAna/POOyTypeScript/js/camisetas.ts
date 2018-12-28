@@ -1,7 +1,8 @@
 //El nombre del archivo debe ser igual a la clase.
 //las propiedades puedes ser públicas. Para que puedan ser utilizadas fuera de la clase
-//CONTRUCTOR: METODO DENTRO DE UNA CLASE PARA DARLE UN VALOR INICIAL A LAS PROPIEDAS DEL OBJETO AL CREARLO
+
 // Clase (molde del objeto)
+
 class Camiseta {
     //Propiedades (características del objeto)
     public color: string;
@@ -32,8 +33,17 @@ console.log(camiseta, fiesta)
 
 ////////////////////////////////////////////////////////////////////////////
 
+//CONTRUCTOR: METODO DENTRO DE UNA CLASE PARA DARLE UN VALOR INICIAL A LAS PROPIEDAS DEL OBJETO AL CREARLO
+//INTERFACES: ES UN CONTRATO QUE DEBE CUMPLIR NUESTRA CLASE:
+//DECORADOR: ADICIONAR UNA FUNCIONALIDAD EXTRA A UNA CLASE:
+
 //con propiedades privadas:
-class Vestidos {
+interface vestidoBase{
+    setColor(color);
+    getColor();
+}
+
+class Vestidos implements vestidoBase{
     //Propiedades (características del objeto)
     private color: string;
     private modelo: string;
@@ -52,14 +62,31 @@ class Vestidos {
     public setColor(color){
         this.color = color
     }
-    public getColor(color){
+    public getColor(){
         return this.color
     }
 }
 
-var vestidoLargo = new Vestidos("Rosa", "Drapeado", "XS", "Guess", 69)
-vestidoLargo.setColor("Rosa Brillante")
+//HERENCIA: COGER LAS PROPIEDAS DE LA CLASE PADRE(Vestidos).
 
-console.log(vestidoLargo)
+class VestidoCocktel extends Vestidos{
+    public cinturon: boolean;
+
+    setCinturon(cinturon){
+        this.cinturon = cinturon
+    }
+
+    getCinturon():boolean{
+        return this.cinturon
+    }
+}
 
 
+var vestidos = new Vestidos("Plum", "Drapeado", "XS", "Guess", 159);
+console.log(vestidos)
+
+var vestidoCocktel = new VestidoCocktel("","Ajustado","S","Maximo Dutti",200)
+vestidoCocktel.setCinturon(true);
+vestidoCocktel.setColor("Rosa")
+
+console.log(vestidoCocktel)
