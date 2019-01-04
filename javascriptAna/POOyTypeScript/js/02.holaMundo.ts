@@ -1,2 +1,3 @@
-var holaMundo:string = "Hola Mundo con Ana Navarro"
+
+var holaMundo: string = "Bienvenida, Ana Navarro"
 console.log(holaMundo)

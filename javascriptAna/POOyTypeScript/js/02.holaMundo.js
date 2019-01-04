@@ -1,2 +1,2 @@
-var holaMundo = "Hola Mundo con Ana Navarro";
+var holaMundo = "Bienvenida, Ana Navarro";
 console.log(holaMundo);

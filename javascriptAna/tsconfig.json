@@ -1,5 +1,7 @@
+//ESTA CARPETA LA CREAMOS ESCRIBIENDO EN EL TERMINAL tsc -init
+// CONTROL + SPACE PARA ESCRIBIR CODIGO
+
 {
-  "compileOnSave": true,
   "compilerOptions": {
     "module": "commonjs"
   },
