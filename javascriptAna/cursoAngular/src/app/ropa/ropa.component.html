@@ -1,21 +1,39 @@
-<h3>{{titulo}}</h3>
-<p>Marcas a la venta:</p>
+<p>Añadir Marcas:</p>
+<input type="text" [(ngModel)]="miMarca" (blur)="onBlur()" (keyup.enter)="addMarcas()"/>
+<button (click)="getMarcas()">Mostrar</button>
+<button (click)="addMarcas()">Añadir</button>
+{{miMarca}}
+
+<p>Top Marcas:</p>
 <ul>
-    <li *ngFor="let i of marcas">{{i}}</li>
+    <li *ngFor="let i of marcas; let indice = index">
+        {{indice + ' - ' + i}}
+        <button (click)="borrarMarca()">Eliminar</button>
+    </li>
 </ul>
 
+<p>{{titulo}}</p>
 <ul>
+    
     <li *ngFor="let prenda of vestidos">
         <span [ngStyle]="{'text-decoration': !prenda.stock ? 'line-through' : 'none'}">
-            {{prenda.marca}} - 
-            <strong>{{prenda.precio}}€</strong> - 
-            {{prenda.stock}} - 
-            {{prenda.color}} - 
-            {{prenda.diseno}}
-        </span>
-        <span [ngStyle]="{'color': 'red'}" *ngIf="prenda.stock == false"> ¡Fuera de STOCK!</span>
-        <span [ngStyle]="{'color': 'green'}" *ngIf="prenda.precio <= 20"> ¡OFERTA!</span>
-        
+        {{prenda.marca}} - 
+        <strong>{{prenda.precio}}</strong> - 
+        {{prenda.diseno}} - 
+        {{prenda.color}} - 
+        {{prenda.stock}}
+    </span>
+        <span *ngIf="prenda.precio < 30" style="color:aquamarine"> ¡OFERTA!</span>
+        <span *ngIf="prenda.stock == false" style="color: red"> SIN STOCK!</span>
+    
     </li>
-   
 </ul>
+
+<p>El color de esta temporada es:</p>
+<input type="text" [(ngModel)]="color"/>
+<ul [ngSwitch]="color">
+    <li *ngSwitchCase="'pink'">...es el <span style="color:blueviolet">Rosa</span></li>
+    <li *ngSwitchCase="'red'">...es el <span style="color:red">Rojo</span></li>
+    <li *ngSwitchCase="'blue'">...es el <span style="color:blue">Azul</span></li>
+    <li *ngSwitchCase="'brown'">...es el <span style="color:brown">Marrón</span></li>
+</ul>>

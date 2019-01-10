@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
-import { Configuracion } from './models/configuracion';
+import { Configuracion } from './model/configuracion'; 
+
 
 
 @Component({
@@ -14,12 +15,13 @@ export class AppComponent {
   public mostrarVideojuego: boolean = true;
 
   constructor(){
-    this.title = Configuracion.titulo;
-    this.descripcion = Configuracion.descripcion;
+    this.title = Configuracion.titulo
+    this.descripcion = Configuracion.descripcion
     this.config = Configuracion;
-
   }
+
   ocultarVideojuego(value){
     this.mostrarVideojuego = value
   }
+
 }

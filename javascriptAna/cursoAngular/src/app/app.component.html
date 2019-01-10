@@ -1,20 +1,17 @@
 
-<div [ngStyle]="{
-  'background': config.fondo,
-  'padding': '20px',
-  'border': '8px solid black',
-  'border-color': config.color
-}">
+<div [ngStyle]="{'background': config.fondo, 
+'border': '8px solid',
+'border-color': config.color,
+'padding': '20px'}">
   <h1>
    {{ title }}!
   </h1>
-  <p>{{descripcion}}</p>
+  
+  
   <button (click)="ocultarVideojuego(false)" *ngIf="mostrarVideojuego">Ocultar</button>
   <button (click)="ocultarVideojuego(true)" *ngIf="!mostrarVideojuego">Mostrar</button>
-
   <videojuego *ngIf="mostrarVideojuego"></videojuego>
   <ropa></ropa>
-  
 
  </div>
 

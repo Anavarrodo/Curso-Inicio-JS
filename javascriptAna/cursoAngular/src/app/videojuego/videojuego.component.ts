@@ -1,4 +1,3 @@
-
 import { Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
 
 @Component({
@@ -7,10 +6,13 @@ import { Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
 })
 
 export class videojuegoComponent implements OnInit, DoCheck, OnDestroy{
-    public descripcion: string
+    public titulo: string;
+    public descripcion: string;
+    
+
     constructor(){
-        this.descripcion = "Los juegos más populares para Ana Navarro"
-        console.log("Componente videojuego.component.ts cargado correctamente")
+        this.titulo = "Videojuegos!!",
+        this.descripcion = "Estos son los videojuegos de moda:"
     }
 
     ngOnInit(){
@@ -21,11 +23,13 @@ export class videojuegoComponent implements OnInit, DoCheck, OnDestroy{
         console.log("DoCheck ejecutado")
     }
 
-    cambiarDescripcion(){
-        this.descripcion = "Hola holita amigos!!"
+    cambiarTitulo(){
+        this.titulo = "Videojuegos para todos!!"
     }
 
     ngOnDestroy(){
         console.log("OnDestroy ejecutado")
     }
+
+  
 }
