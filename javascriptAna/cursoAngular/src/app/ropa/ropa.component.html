@@ -1,0 +1,21 @@
+<h3>{{titulo}}</h3>
+<p>Marcas a la venta:</p>
+<ul>
+    <li *ngFor="let i of marcas">{{i}}</li>
+</ul>
+
+<ul>
+    <li *ngFor="let prenda of vestidos">
+        <span [ngStyle]="{'text-decoration': !prenda.stock ? 'line-through' : 'none'}">
+            {{prenda.marca}} - 
+            <strong>{{prenda.precio}}€</strong> - 
+            {{prenda.stock}} - 
+            {{prenda.color}} - 
+            {{prenda.diseno}}
+        </span>
+        <span [ngStyle]="{'color': 'red'}" *ngIf="prenda.stock == false"> ¡Fuera de STOCK!</span>
+        <span [ngStyle]="{'color': 'green'}" *ngIf="prenda.precio <= 20"> ¡OFERTA!</span>
+        
+    </li>
+   
+</ul>
