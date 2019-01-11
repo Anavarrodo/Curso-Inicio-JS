@@ -8,6 +8,8 @@ import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
 import { ropaComponent } from './ropa/ropa.component';
 import { videojuegoComponent } from './videojuego/videojuego.component';
+import { ExternoComponent } from './externo/externo.component';
+
 
 // ARRAY DE RUTAS
 
@@ -18,6 +20,7 @@ const appRoutes: Routes = [
     {path: 'home/:nombre/:followers', component: HomeComponent},
     {path: 'ropa', component: ropaComponent},
     {path: 'videojuego', component: videojuegoComponent},
+    {path: 'externo', component: ExternoComponent},
     {path: '**', component: HomeComponent}
 
 ];

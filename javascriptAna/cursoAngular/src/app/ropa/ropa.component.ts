@@ -5,7 +5,8 @@ import { ropaService } from '../service/ropa.service';
 @Component({
     selector: 'ropa',
     templateUrl: './ropa.component.html',
-    providers: [ ropaService]
+    providers: [ropaService]
+    
 })
 
 export class ropaComponent implements OnInit{
@@ -18,16 +19,14 @@ export class ropaComponent implements OnInit{
     constructor(
         private _ropaService: ropaService
     ){
-       
         this.titulo = "Marcas, Precios y stockaje!!";
         this.color = 'brown';
         this.marcas = new Array();
-      
     }
 
     ngOnInit(){
         this.vestidos = this._ropaService.getVestidos()
-        alert(this._ropaService.getPrueba())
+        //alert(this._ropaService.getPrueba())
         this.getMarca()
     }
 
