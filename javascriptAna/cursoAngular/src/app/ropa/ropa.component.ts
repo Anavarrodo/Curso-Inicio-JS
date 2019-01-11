@@ -56,6 +56,6 @@ export class ropaComponent implements OnInit{
     }
 
     onBlur(){
-        console.log("Blur ejecutado, hemos salido del iput")
+        console.log("Blur ejecutado, hemos salido del input")
     }
 }

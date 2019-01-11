@@ -4,14 +4,24 @@
 'border-color': config.color,
 'padding': '20px'}">
   <h1>
-   {{ title }}!
+   {{ title }}
   </h1>
-  
-  
+
+  <nav>
+    <a [routerLink]="['/home']" [routerLinkActive]="['activated']">Home</a>
+    &nbsp;
+    <a [routerLink]="['/ropa']" [routerLinkActive]="['activated']">Ropa</a>
+    &nbsp;
+    <a [routerLink]="['/videojuego']" [routerLinkActive]="['activated']">Videojuegos</a>
+  </nav>
+
+<!--
   <button (click)="ocultarVideojuego(false)" *ngIf="mostrarVideojuego">Ocultar</button>
   <button (click)="ocultarVideojuego(true)" *ngIf="!mostrarVideojuego">Mostrar</button>
   <videojuego *ngIf="mostrarVideojuego"></videojuego>
   <ropa></ropa>
+-->
+<router-outlet></router-outlet>
 
  </div>
 

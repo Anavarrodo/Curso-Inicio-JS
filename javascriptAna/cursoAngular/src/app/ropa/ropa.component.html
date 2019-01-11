@@ -18,11 +18,17 @@
     <li *ngFor="let prenda of vestidos">
         <span [ngStyle]="{'text-decoration': !prenda.stock ? 'line-through' : 'none'}">
         {{prenda.marca}} - 
-        <strong>{{prenda.precio}}</strong> - 
-        {{prenda.diseno}} - 
-        {{prenda.color}} - 
-        {{prenda.stock}}
-    </span>
+        <strong [class.altoPrecio]="prenda.precio >= 100"
+            [ngClass]="{
+                'fondoRosa': prenda.precio > 150,
+                'subrayado': prenda.marca == 'Guess'
+            }">
+            {{prenda.precio}}
+        </strong> - 
+            {{prenda.diseno}} - 
+            {{prenda.color}} - 
+            {{prenda.stock}}
+        </span>
         <span *ngIf="prenda.precio < 30" style="color:aquamarine"> ¡OFERTA!</span>
         <span *ngIf="prenda.stock == false" style="color: red"> SIN STOCK!</span>
     

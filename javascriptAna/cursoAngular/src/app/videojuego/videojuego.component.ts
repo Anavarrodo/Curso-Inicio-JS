@@ -8,19 +8,22 @@ import { Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
 export class videojuegoComponent implements OnInit, DoCheck, OnDestroy{
     public titulo: string;
     public descripcion: string;
+ 
     
 
     constructor(){
-        this.titulo = "Videojuegos!!",
-        this.descripcion = "Estos son los videojuegos de moda:"
+        this.titulo = "Videojuegos!!";
+        this.descripcion = "Estos son los videojuegos de moda:";
+        
+ 
     }
 
     ngOnInit(){
-        console.log("OnInit ejecutado")
+        // console.log("OnInit ejecutado")
     }
 
     ngDoCheck(){
-        console.log("DoCheck ejecutado")
+        // console.log("DoCheck ejecutado")
     }
 
     cambiarTitulo(){
@@ -28,8 +31,8 @@ export class videojuegoComponent implements OnInit, DoCheck, OnDestroy{
     }
 
     ngOnDestroy(){
-        console.log("OnDestroy ejecutado")
+        // console.log("OnDestroy ejecutado")
     }
 
-  
+   
 }
