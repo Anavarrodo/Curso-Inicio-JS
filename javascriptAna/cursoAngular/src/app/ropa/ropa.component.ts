@@ -1,9 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { Vestido } from '../model/vestido';
+import { ropaService } from '../service/ropa.service';
 
 @Component({
     selector: 'ropa',
-    templateUrl: './ropa.component.html'
+    templateUrl: './ropa.component.html',
+    providers: [ ropaService]
 })
 
 export class ropaComponent implements OnInit{
@@ -13,24 +15,19 @@ export class ropaComponent implements OnInit{
     public color: string;
     public miMarca: string;
 
-    constructor(){
+    constructor(
+        private _ropaService: ropaService
+    ){
        
         this.titulo = "Marcas, Precios y stockaje!!";
         this.color = 'brown';
         this.marcas = new Array();
-        this.vestidos = [
-            new Vestido("Guess", 185.90, "Rojo", "Ajustado", true),
-            new Vestido("Calvin Klein", 285.00, "Blanco", "Cocktel", false),
-            new Vestido("Purificacion Garcia", 145.99, "Beig", "Largo", true),
-            new Vestido("Asos", 15.95, "Estampado", "Playero", true),
-            new Vestido("Zara", 35, "Negro", "Fiesta", true),
-            new Vestido("Calvin Klein", 390, "Negro", "Lentejuelas", false),
-            new Vestido("Guess", 88.90, "Rosa", "Corto", true),
-        ]
+      
     }
 
     ngOnInit(){
-        console.log(this.vestidos)
+        this.vestidos = this._ropaService.getVestidos()
+        alert(this._ropaService.getPrueba())
         this.getMarca()
     }
 
