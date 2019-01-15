@@ -5,6 +5,7 @@ import { routing, appRoutingProviders } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { VideojuegoComponent } from './videojuego/videojuego.component';
@@ -12,6 +13,8 @@ import { RopaComponent } from './ropa/ropa.component';
 import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
+
+import { CalculadoraPipes } from './pipes/calculadora.pipes';
 
 
 @NgModule({
@@ -22,6 +25,7 @@ import { ExternoComponent } from './externo/externo.component';
     CursosComponent,
     HomeComponent,
     ExternoComponent,
+    CalculadoraPipes
  
   ],
   imports: [
@@ -30,8 +34,6 @@ import { ExternoComponent } from './externo/externo.component';
     FormsModule,
     routing,
     HttpClientModule
-
-    
   ],
   providers: [
     appRoutingProviders

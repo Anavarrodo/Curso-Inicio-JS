@@ -1,4 +1,3 @@
-
 export class ContactoUsuario {
     constructor(
         public nombre: String,
