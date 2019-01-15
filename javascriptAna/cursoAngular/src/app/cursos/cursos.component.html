@@ -1,0 +1,12 @@
+<h3>Cursos</h3>
+
+<div *ngIf="identificado;then siIdentificado else noIdentificado"></div>
+
+<ng-template #siIdentificado>
+    <h3>Estás identificado</h3>
+    <button (click)="out()">Salir</button>
+  </ng-template>
+<ng-template #noIdentificado>
+  <p>No estás identificado</p>
+  <button (click)="login()">Identificar</button>
+</ng-template>

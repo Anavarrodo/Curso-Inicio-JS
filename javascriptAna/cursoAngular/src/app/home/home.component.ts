@@ -1,40 +1,32 @@
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, Params } from '@angular/router';
 
-
 @Component({
-  selector: 'app-home',
+  selector: 'home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-  public nombre: string;
-  public followers: number;
-  public identificador: boolean;
-  
+  public nombre: string
+  public followers: number
   constructor(
     private _route: ActivatedRoute,
-    private _router: Router,
-    
-  ){
-  }
+    private _router: Router
+  ) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this._route.params.subscribe((params: Params)=>{
-      this.nombre = params.nombre;
-      this.followers = +params.followers;
+      this.nombre = params.nombre
+      this.followers = +params.followers
+
+      if(this.nombre == 'ninguno'){
+        this._router.navigate(['/ropa'])
+      }
     })
   }
 
-  redireccionar(){
-    this._router.navigate(['/ropa'])
-  }
+ redirigir(){
+   this._router.navigate(['/cursos'])
+ }
 
-  outIdentificar(){
-    this.identificador = false;
-  }
-
-  identificar(){
-    this.identificador = true;
-  }
 }

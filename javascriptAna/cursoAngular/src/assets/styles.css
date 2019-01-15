@@ -1,17 +1,13 @@
 .altoPrecio{
-    color: gray;
-    font-size: 18px;
-}
-
-.fondoRosa{
-    background: pink
+    background: gray;
+    font-size: 20px;
 }
 
 .subrayado{
     text-decoration: underline
 }
 
-.activated{
-    border: 3px solid chocolate;
-    font-size: 25px
+.active{
+    border: 5px solid;
+    border-color: orange
 }

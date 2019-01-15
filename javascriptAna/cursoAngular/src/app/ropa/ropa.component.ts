@@ -1,57 +1,60 @@
 import { Component, OnInit } from '@angular/core';
-import { Vestido } from '../model/vestido';
-import { ropaService } from '../service/ropa.service';
+import { Vestido } from '../models/vestido';
+import { RopaService } from '../service/ropa.service';
 
 @Component({
     selector: 'ropa',
     templateUrl: './ropa.component.html',
-    providers: [ropaService]
-    
+    providers: [
+        RopaService
+    ]
 })
 
-export class ropaComponent implements OnInit{
+export class RopaComponent implements OnInit{
     public titulo: string;
     public vestidos: Array<Vestido>
-    public marcas;
-    public color: string;
-    public miMarca: string;
+    public marcas: String[]
+    public color: string
+    public miMarca: any;
+    
 
     constructor(
-        private _ropaService: ropaService
+        private _ropaService: RopaService
     ){
-        this.titulo = "Marcas, Precios y stockaje!!";
-        this.color = 'brown';
-        this.marcas = new Array();
+        this.titulo = "Ropa de Temporada"
+        this.marcas = []
+        this.color = 'pink'
+       
     }
 
     ngOnInit(){
         this.vestidos = this._ropaService.getVestidos()
-        //alert(this._ropaService.getPrueba())
+        console.log(this._ropaService.getPrueba())
+        this.getMarcas()
         this.getMarca()
     }
 
-    getMarca(){
-        this.vestidos.forEach((element, index) => {
+    getMarcas(){
+        this.vestidos.forEach(element=>{
             if(this.marcas.indexOf(element.marca) < 0){
-                this.marcas.push(element.marca)
+            this.marcas.push(element.marca)
             }
+           
         })
         console.log(this.marcas)
+        
     }
-
-    getMarcas(){
+    
+    getMarca(){
         console.log(this.miMarca)
     }
 
-    addMarcas(){
+    addMarca(){
         this.marcas.push(this.miMarca)
     }
 
-    borrarMarca(index){
+    borrar(index){
         this.marcas.splice(index, 1)
     }
 
-    onBlur(){
-        console.log("Blur ejecutado, hemos salido del input")
-    }
 }

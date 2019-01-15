@@ -1,45 +1,67 @@
+<h3>{{titulo}}</h3>
+
 <p>Añadir Marcas:</p>
-<input type="text" [(ngModel)]="miMarca" (blur)="onBlur()" (keyup.enter)="addMarcas()"/>
-<button (click)="getMarcas()">Mostrar</button>
-<button (click)="addMarcas()">Añadir</button>
-{{miMarca}}
+<input type="text" [(ngModel)]="miMarca" (keyup.enter)="addMarca()"/>
+<button (click)="getMarca()">Mostrar</button>
+<button (click)="addMarca()">Añadir</button>
+<br>
+<p>{{miMarca}}</p>
 
-<p>Top Marcas:</p>
+<p>Marcas Disponibles:</p>
 <ul>
-    <li *ngFor="let i of marcas; let indice = index">
-        {{indice + ' - ' + i}}
-        <button (click)="borrarMarca()">Eliminar</button>
+    <li *ngFor="let i of marcas; let indice = index">{{i}}
+        <button (click)="borrar(indice)">Eliminar</button>
     </li>
+   
 </ul>
-
-<p>{{titulo}}</p>
 <ul>
-    
-    <li *ngFor="let prenda of vestidos">
-        <span [ngStyle]="{'text-decoration': !prenda.stock ? 'line-through' : 'none'}">
-        {{prenda.marca}} - 
-        <strong [class.altoPrecio]="prenda.precio >= 100"
-            [ngClass]="{
-                'fondoRosa': prenda.precio > 150,
-                'subrayado': prenda.marca == 'Guess'
-            }">
-            {{prenda.precio}}
-        </strong> - 
-            {{prenda.diseno}} - 
-            {{prenda.color}} - 
-            {{prenda.stock}}
+    <li *ngFor="let i of vestidos">
+        <span [ngStyle]="{
+            'text-decoration': i.stock == false ? 'line-through' : 'none'
+        }">
+        {{i.marca}} - 
+        <strong [ngClass]="{
+            'altoPrecio': i.precio >= 100,
+            'subrayado': i.marca == 'Guess'
+        }">{{i.precio}} €</strong> - 
+        {{i.diseno}} - 
+        {{i.stock}} - 
+        {{i.color}} 
         </span>
-        <span *ngIf="prenda.precio < 30" style="color:aquamarine"> ¡OFERTA!</span>
-        <span *ngIf="prenda.stock == false" style="color: red"> SIN STOCK!</span>
-    
+        <span *ngIf="i.precio < 50" 
+                [ngStyle]="{
+                'color': 'green',
+                'font-size': '20px'
+                }">- Oferta!!
+            </span>
+        <span *ngIf="i.stock == false" [ngStyle]="{
+            'color': 'red',
+            'font-size': '18px'
+        }">...No Disponibles!!
+            </span>
+       
+        
     </li>
+    
 </ul>
+
+
+<input type="text" [(ngModel)]="color" />
 
 <p>El color de esta temporada es:</p>
-<input type="text" [(ngModel)]="color"/>
+
 <ul [ngSwitch]="color">
-    <li *ngSwitchCase="'pink'">...es el <span style="color:blueviolet">Rosa</span></li>
-    <li *ngSwitchCase="'red'">...es el <span style="color:red">Rojo</span></li>
-    <li *ngSwitchCase="'blue'">...es el <span style="color:blue">Azul</span></li>
-    <li *ngSwitchCase="'brown'">...es el <span style="color:brown">Marrón</span></li>
-</ul>>
+    <li *ngSwitchCase="'pink'">
+        ...el <span [ngStyle]="{'color': color}">Rosa</span>
+    </li>
+    <li *ngSwitchCase="'blue'">
+        ...el <span [ngStyle]="{'color': color}">Azul</span>
+    </li>
+    <li *ngSwitchCase="'brown'">
+        ...el <span [ngStyle]="{'color': color}">Marrón</span>
+    </li>
+    <li *ngSwitchCase="'green'">
+        ...el <span [ngStyle]="{'color': color}">verde</span>
+    </li>
+</ul>
+

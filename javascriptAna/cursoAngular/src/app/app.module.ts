@@ -4,24 +4,25 @@ import { FormsModule } from '@angular/forms';
 import { routing, appRoutingProviders } from './app.routing';
 import { HttpClientModule } from '@angular/common/http';
 
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { videojuegoComponent } from './videojuego/videojuego.component';
-import { ropaComponent } from './ropa/ropa.component';
+import { VideojuegoComponent } from './videojuego/videojuego.component';
+import { RopaComponent } from './ropa/ropa.component';
+import { CursosComponent } from './cursos/cursos.component';
 import { HomeComponent } from './home/home.component';
 import { ExternoComponent } from './externo/externo.component';
-import { from } from 'rxjs';
-
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    videojuegoComponent,
-    ropaComponent,
+    VideojuegoComponent,
+    RopaComponent,
+    CursosComponent,
     HomeComponent,
     ExternoComponent,
-
+ 
   ],
   imports: [
     BrowserModule,
@@ -29,9 +30,11 @@ import { from } from 'rxjs';
     FormsModule,
     routing,
     HttpClientModule
+
+    
   ],
   providers: [
-   appRoutingProviders
+    appRoutingProviders
   ],
   bootstrap: [AppComponent]
 })

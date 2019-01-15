@@ -1,19 +1,5 @@
+
+<button (click)="redirigir()">Ir a Cursos</button>
+
 <h3 *ngIf="nombre">Bienvenido {{nombre}}</h3>
-
-<h4 *ngIf="followers">Tienes {{followers}} seguidores</h4>
-
-<button (click)="redireccionar()">Ir a Ropa</button>
-
-<br>
-
-<div *ngIf="identificador; then siIdentificado else noIdentificado">
-</div>
-
-<ng-template #siIdentificado>
-    <p>Estas dentro, gracias.</p>
-    <button (click)=outIdentificar()>Salir</button>
-</ng-template>
-<ng-template #noIdentificado>
-        <p>Por favor, identifícate</p>
-        <button (click)=identificar()>Entrar</button>
-</ng-template>
+<h3 *ngIf="followers">Tienes {{followers}} seguidores</h3>

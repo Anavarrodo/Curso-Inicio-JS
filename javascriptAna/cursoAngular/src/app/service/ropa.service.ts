@@ -1,26 +1,26 @@
 import { Injectable } from '@angular/core';
-import { Vestido } from '../model/vestido';
+import { Vestido } from '../models/vestido';
 
 @Injectable()
 
-export class ropaService{
+export class RopaService {
     public vestidos: Array<Vestido>
+
     constructor(){
         this.vestidos = [
-            new Vestido("Guess", 185.90, "Rojo", "Ajustado", true),
-            new Vestido("Calvin Klein", 285.00, "Blanco", "Cocktel", false),
-            new Vestido("Purificacion Garcia", 145.99, "Beig", "Largo", true),
-            new Vestido("Asos", 15.95, "Estampado", "Playero", true),
-            new Vestido("Zara", 35, "Negro", "Fiesta", true),
-            new Vestido("Calvin Klein", 390, "Negro", "Lentejuelas", false),
-            new Vestido("Guess", 88.90, "Rosa", "Corto", true),
+            new Vestido("Guess", 99.99, "Ajustado", true, "Plateado"),
+            new Vestido("Purificación García", 250, "Cocktel", true, "RosaPastel"),
+            new Vestido("Calvin Klein", 300, "Corte media pierna", false, "Azul bebé"),
+            new Vestido("Asos", 15.99, "Playero", true, "Blanco"),
+            new Vestido("Zara", 25.90, "Pichi", true, "Vaquero"),
+            new Vestido("Guess", 450, "Fiesta",false, "Dorado"),
+            new Vestido("Calvin Klein", 600, "Fiesta", true, "Negro")
         ]
     }
 
     getPrueba(){
-        return "Hola desde Service"
+        return "Hola desde Servicios"
     }
-
     getVestidos(){
         return this.vestidos
     }
