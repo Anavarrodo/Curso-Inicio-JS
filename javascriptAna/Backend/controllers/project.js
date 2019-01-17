@@ -1,6 +1,7 @@
 'use strict'
 
 var ProjectSchema = require ('../models/project');
+var fs = require ('fs');
 
 var controller = {
 
@@ -55,7 +56,7 @@ var controller = {
         });
     },
 
-    getProject: function(req, res){
+    getProjects: function(req, res){
         ProjectSchema.find({}).sort('year').exec((err, projects) => {
             if(err){
                 return res.status(500).send({message: 'Error al devolver los datos'})
@@ -96,18 +97,36 @@ var controller = {
         });
     },
     
-    uploadImage: function(req, res){
-        var projectId = req.params.id;
-        var fileName = "Imagen no cargada...";
-        console.log("Params----->"+req.params)
-        if(req.files){
-            return res.status(200).send({
-                files: req.files
-            });
-        }else{
-            return res.status(200).send({ message: fileName })
-        };
-    }
+  uploadImage: function(req, res){
+      var projectId = req.params.id;
+      var fileName = "Imagen no cargada...";
+
+      if(req.files){
+         var filePath = req.files.image.path;
+         var fileSplit = filePath.split('\\');
+         var fileName = fileSplit[1];
+         var extSplit = fileName.split('\.');
+         var fileExt = extSplit[1];
+
+            if(fileExt == 'png' || fileExt == 'jpg' || fileExt == 'jpeg' || fileExt == 'gif'){
+                ProjectSchema.findByIdAndUpdate(projectId, { image: fileName }, { new: true }, (err, projectUpdate) => {
+                    if(err){
+                        return res.status(500).send({message: 'Error al subir la imagen'})
+                    }else if(!projectUpdate){
+                        return res.status(404).send({message: 'No existe el proyecto'})
+                    }else{
+                        return res.status(200).send({ project: projectUpdate })
+                    };
+                 })
+            }else{
+                fs.unlink(filePath, (err) => {
+                    return res.status(200).send({ message: 'La extensión del archivo no es válida' })
+                }) 
+            }
+      }else{
+          return res.status(200).send({ message: fileName })
+      };
+  }
 };
 
 module.exports = controller;
