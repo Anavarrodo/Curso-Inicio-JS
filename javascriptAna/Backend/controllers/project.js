@@ -37,7 +37,7 @@ var controller = {
             };
         });
     },
-
+//get project
     getProyect: function(req, res){
         var projectId = req.params.id;
 
