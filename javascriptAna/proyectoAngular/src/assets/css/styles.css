@@ -115,6 +115,8 @@ header a:hover,
     box-shadow: 0px 0px 40px gray;
     background: #EDF9F2   ;
     padding-top: 120px;
+    padding: 77px;
+    overflow: auto;
 }
 
 /* Pie de Página */
@@ -147,6 +149,7 @@ footer{
     font-family: "Moo";
     font-size: 39px;
     color: #B2C1B8;
+   
 }
 
 #tittle p{
@@ -168,6 +171,7 @@ article h3{
     border-bottom: 1px solid #9DA8A2;
     text-align: left;
     font-size: 42px;
+    
 }
 
 article p{
@@ -178,15 +182,16 @@ article p{
 /* Sección Formulario */
 
 .container{
-    padding: 71px;
-    padding-top: 37px;
+    padding: 50px;
+    padding-top: 10px;
 }
 
 .container h3{
     display: block;
     border-bottom: 1px solid #9DA8A2;
     padding-bottom: 5px;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    margin-top: 30px;
 }
 
 form{
@@ -196,8 +201,8 @@ form{
 form label{
     display: block;
     width: 100%;
-    margin-top: 10px;
     margin-bottom: 5px;
+    margin-top: 10px;
 }
 
 form input[type="text"],
@@ -209,7 +214,9 @@ form textarea{
 }
 
 form input[type="submit"],
-form button{
+form button,
+.buttom-edit,
+.buttom-delete{
     display: block;
     font-size: 17px;
     padding: 10px;
@@ -217,6 +224,14 @@ form button{
     color: white;
     background: #003c17;
     cursor: pointer;
+    border: 1px solid gray;
+}
+
+.buttom-edit,
+.buttom-delete{
+    width: 40%;
+    text-align: center;
+    text-decoration: none;
 }
 
 form input[type="submit"]:hover,
@@ -226,7 +241,85 @@ form button:hover{
     cursor: pointer;
 }
 
+form input[disabled]{
+    opacity: 0.4;
+    cursor: not-allowed;
+}
+
 .input{
     font-family: "NotoSans";
     font-size: 15px;
+}
+
+.error{
+    color: pink;
+
+}
+
+.message{
+    padding: 30px;
+    font-size: 27px;
+}
+
+/* Página de Proyectos */
+
+.project{
+    list-style: none;
+    display: block;
+    float: left;
+    width: 28%;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 32px;
+    margin-bottom: -7px;
+    
+}
+
+.project .image{
+    width: 100%;
+    height: 150px;
+    overflow: hidden;
+}
+
+.project h3{
+    text-align: center;
+    margin-top: 3px;
+}
+
+.project img{
+    width: 126%;
+}
+
+.project a{
+    text-decoration: none;
+    color: black;
+}
+
+.container .image{
+    width: 50%;
+    float: left;
+
+}
+
+.container .image img{
+    width: 100%;
+    margin-top: 17%;
+   
+
+}
+
+.container .data{
+    width: 50%;
+    float: left;
+    margin-left: 48%;
+    line-height: 56px;
+    
+}
+
+.container .data p{
+    width: 50%;
+    float: unset;
+    margin-left: 1%;
+    
 }
